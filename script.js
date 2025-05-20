@@ -1,0 +1,1 @@
+// JS pentru animații scroll, carusel, glisare Despre noi

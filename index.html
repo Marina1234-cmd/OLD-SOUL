@@ -1,1 +1,231 @@
-<!-- Pagina principală cu secțiunea hero, produse, despre noi animat -->
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Old Soul - Comori Vintage</title>
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    :root {
+      --maro-inchis: #4b352a;
+      --portocaliu-caramiziu: #cd7640;
+      --verde-pastel: #b7d1a3;
+      --galben-pal: #f2f0bb;
+    }
+
+    body {
+      margin: 0;
+      font-family: 'Georgia', serif;
+      background-color: var(--galben-pal);
+      color: var(--maro-inchis);
+    }
+
+    nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background-color: var(--maro-inchis);
+      padding: 10px 20px;
+      color: white;
+    }
+
+    nav .logo {
+      font-weight: bold;
+      font-size: 1.5rem;
+    }
+
+    .navbar {
+      list-style: none;
+      display: flex;
+      gap: 20px;
+    }
+
+    .navbar li a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    .hero {
+      position: relative;
+      width: 100%;
+      height: 100vh;
+      overflow: hidden;
+    }
+
+    .hero img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .hero h1 {
+      position: absolute;
+      top: 40%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      color: white;
+      font-size: 4rem;
+      text-shadow: 2px 2px 4px #000;
+      margin: 0;
+    }
+
+    .carousel {
+      padding: 3rem 1rem;
+      background-color: var(--verde-pastel);
+    }
+
+    .carousel h2 {
+      text-align: center;
+      font-size: 2.5rem;
+      margin-bottom: 2rem;
+    }
+
+    .carousel-track {
+      display: flex;
+      gap: 20px;
+      overflow-x: auto;
+      padding-bottom: 1rem;
+      scroll-snap-type: x mandatory;
+    }
+
+    .carousel-track img {
+      height: 250px;
+      border-radius: 8px;
+      scroll-snap-align: center;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    }
+
+    .despre-container {
+      background-color: var(--portocaliu-caramiziu);
+      padding: 3rem 2rem;
+      display: flex;
+      align-items: center;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .despre-title {
+      writing-mode: vertical-rl;
+      transform: rotate(180deg);
+      font-size: 2rem;
+      font-weight: bold;
+      color: white;
+      margin-right: 2rem;
+    }
+
+    .despre-content {
+      background-color: white;
+      color: var(--maro-inchis);
+      padding: 1rem;
+      border-radius: 8px;
+      max-height: 300px;
+      overflow-y: auto;
+      font-size: 1.1rem;
+      line-height: 1.6;
+      width: 100%;
+      transition: max-height 0.5s ease-in-out;
+    }
+
+    .oferta {
+      background: url('img/masina_dacia.png') no-repeat center/cover;
+      text-align: center;
+      padding: 5rem 2rem;
+      color: white;
+      text-shadow: 1px 1px 5px #000;
+    }
+
+    .oferta h2 {
+      font-size: 2.5rem;
+    }
+
+    .oferta p {
+      font-size: 1.2rem;
+      margin: 1rem 0;
+    }
+
+    .oferta a {
+      background-color: var(--maro-inchis);
+      color: white;
+      padding: 0.75rem 1.5rem;
+      border-radius: 5px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    footer {
+      background-color: var(--maro-inchis);
+      color: white;
+      text-align: center;
+      padding: 1rem;
+    }
+
+    @media screen and (max-width: 768px) {
+      .hero h1 {
+        font-size: 2.5rem;
+      }
+
+      .despre-container {
+        flex-direction: column;
+        text-align: center;
+      }
+
+      .despre-title {
+        writing-mode: horizontal-tb;
+        transform: rotate(0);
+        margin: 0 0 1rem 0;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <div class="logo">Old Soul</div>
+    <ul class="navbar">
+      <li><a href="#">Home</a></li>
+      <li><a href="#produse">Produse</a></li>
+      <li><a href="#despre">Despre</a></li>
+      <li><a href="#blog">Blog</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+
+  <section class="hero">
+    <img src="img/imghero.png" alt="Hero Image">
+    <h1>Old Soul – Comori Vintage</h1>
+  </section>
+
+  <section id="produse" class="carousel">
+    <h2>Obiecte Vintage</h2>
+    <div class="carousel-track">
+      <img src="img/camera_vintage.png" alt="Camera">
+      <img src="img/Ceasuri antice pe fundal texturat.png" alt="Ceasuri">
+      <img src="img/gramofon.png" alt="Gramofon">
+      <img src="img/lanterna.png" alt="Lanternă">
+      <img src="img/masina_dacia.png" alt="Dacia">
+      <img src="img/masina_de_scris.png" alt="Mașină de scris">
+      <img src="img/valize.png" alt="Valize">
+      <img src="img/vioara.png" alt="Vioară">
+    </div>
+  </section>
+
+  <section id="despre" class="despre-container">
+    <div class="despre-title">Despre</div>
+    <div class="despre-content">
+      Old Soul este mai mult decât un simplu magazin online — este o fereastră către trecut, un portal către epoci în care rafinamentul și meșteșugul erau la loc de cinste. Pasiunea noastră pentru obiectele vintage s-a născut din dorința de a readuce la viață frumusețea, povestea și valoarea lucrurilor care, deși nu mai sunt noi, nu și-au pierdut nici farmecul, nici sufletul. Fiecare produs pe care îl oferim are o istorie, o energie aparte și este ales cu grijă pentru a se potrivi cu cele mai sensibile gusturi – fie că este vorba de o cameră foto de epocă, un gramofon perfect funcțional sau o Dacie 1300 restaurată cu atenție.
+    </div>
+  </section>
+
+  <section class="oferta">
+    <h2>Oferta lunii</h2>
+    <p>Dacia 1300 – autentică și gata de colecție!</p>
+    <a href="https://www.olx.ro/d/oferta/dacia-1300-tranzitie-IDjmPf7.html" target="_blank">Vezi pe OLX</a>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Old Soul. Toate drepturile rezervate.</p>
+  </footer>
+
+</body>
+</html>
